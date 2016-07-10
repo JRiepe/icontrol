@@ -1,0 +1,61 @@
+html {
+	margin: 0 auto;
+	
+	background: #ffcc5c;
+	text-align: center;
+	max-width: 800px;
+	
+}
+li {
+  position: relative;
+  background: white;
+  margin: 5px;
+  padding: 5px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  background: aqua;
+  margin: 5px;
+  padding: 5px;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+.devourButton {
+	width: auto;
+	height: auto;
+	border-radius: 5px;
+	position: sticky;
+	float: auto;
+}
+
+
+button {
+	width: auto;
+	height: auto;
+	border-radius: 5px;
+	;
+}
+
+#burgerimg {
+	width: 200px;
+}
+
+h1 {
+	color: #622569;
+}
+
+.eaten, .notEaten {
+	width: 300px;
+	height: auto;
+	position: relative;
+	margin: 0 auto;
+	text-align: left;
+
+}
