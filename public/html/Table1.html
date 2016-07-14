@@ -4,104 +4,111 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
+    <title>Tables</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
-<body>
-  <div class="container">
-    <table class="bordered striped respinsive-table">
-        
+<body class="black">
+  <div class="container white-text">
+    <div class="row">
+      <div class="col s12">
+            <!-- Table where user can enter information -->
+            <table class="bordered striped respinsive-table">
+                
+                <!-- Columns for the table that we need to generate in the order the user selects them in -->
+                <thead>
+                  <tr>
+                      <th data-field="id">Name</th>
+                      <th data-field="name">Description</th>
+                      <th data-field="price">Group</th>
+                      <th data-field="id">Whole Sale Price</th>
+                      <th data-field="name">Retail Price</th>
+                      <th data-field="price">In stock</th>
+                      <th data-field="id">MRP</th>
+                  </tr>
+                </thead>
 
-        <thead>
-          <tr>
-              <th data-field="id">Name</th>
-              <th data-field="name">Description</th>
-              <th data-field="price">Group</th>
-              <th data-field="id">Whole Sale Price</th>
-              <th data-field="name">Retail Price</th>
-              <th data-field="price">In stock</th>
-              <th data-field="id">MRP</th>
-          </tr>
-        </thead>
+                <!-- Initial two rows where the user can enter information to be stored in SQL and displayed -->
+                <tbody>
+                    <tr>
+                      <td class="grey-text">1</td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                    </tr>
 
-        <tbody>
-            <tr>
-              <td>1</td>
-              <td><label>
-                    <input type="text" placeholder="" />
-                  </label>
-              </td>
-              <td><label>
-                    <input type="text" placeholder="" />
-                  </label>
-              </td>
-              <td><label>
-                    <input type="text" placeholder="" />
-                  </label>
-              </td>
-              <td><label>
-                    <input type="text" placeholder="" />
-                  </label>
-              </td>
-              <td><label>
-                    <input type="text" placeholder="" />
-                  </label>
-              </td>
-              <td><label>
-                    <input type="text" placeholder="" />
-                  </label>
-              </td>
-              <td><label>
-                    <input type="text" placeholder="" />
-                  </label>
-              </td>
-              <td><label>
-                    <input type="text" placeholder="" />
-                  </label>
-              </td>
-            </tr>
+                    <tr>
+                      <td class="grey-text">1</td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                    </tr>
+                </tbody>
 
-            <tr>
-              <td>1</td>
-              <td><label>
-                    <input type="text" placeholder="" />
-                  </label>
-              </td>
-              <td><label>
-                    <input type="text" placeholder="" />
-                  </label>
-              </td>
-              <td><label>
-                    <input type="text" placeholder="" />
-                  </label>
-              </td>
-              <td><label>
-                    <input type="text" placeholder="" />
-                  </label>
-              </td>
-              <td><label>
-                    <input type="text" placeholder="" />
-                  </label>
-              </td>
-              <td><label>
-                    <input type="text" placeholder="" />
-                  </label>
-              </td>
-              <td><label>
-                    <input type="text" placeholder="" />
-                  </label>
-              </td>
-              <td><label>
-                    <input type="text" placeholder="" />
-                  </label>
-              </td>
-            </tr>
-        </tbody>
+            </table> 
 
-    </table>
-
-    <!-- Button to add a new row to the table -->
-    <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+            <!-- Button to add a new row to the table -->
+            <a class="waves-effect waves-light btn yellow black-text">New Row</a>
+      <div class="row">
+    <div class="col s12">
   </div>     
 </body>
 </html>
