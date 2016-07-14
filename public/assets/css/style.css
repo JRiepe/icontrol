@@ -1,61 +1,170 @@
-html {
-	margin: 0 auto;
-	
-	background: #ffcc5c;
-	text-align: center;
-	max-width: 800px;
-	
-}
-li {
-  position: relative;
-  background: white;
-  margin: 5px;
-  padding: 5px;
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+nav ul a,
+nav .brand-logo {
+  color: #999;
 }
 
-.label {
-  font-weight: bold;
+p {
+  line-height: 2rem;
 }
 
-.create-update-form {
-  background: aqua;
-  margin: 5px;
-  padding: 5px;
-}
-
-.form-group {
-  margin-bottom: 5px;
-}
-
-.devourButton {
-	width: auto;
-	height: auto;
-	border-radius: 5px;
-	position: sticky;
-	float: auto;
+.button-collapse {
+  color: #ffff00;
 }
 
 
-button {
-	width: auto;
-	height: auto;
-	border-radius: 5px;
-	;
+#download-button{
+  color:#ffff00;
+  background-color:#ffff00; 
 }
 
-#burgerimg {
-	width: 200px;
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgb(255,255,0);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
 }
 
-h1 {
-	color: #622569;
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
 }
 
-.eaten, .notEaten {
-	width: 300px;
-	height: auto;
-	position: relative;
-	margin: 0 auto;
-	text-align: left;
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
 
+footer.page-footer {
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+ /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #ffffff;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #000000;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;}
+    }
+
+    #placeholder {
+    	background-color: #fff999;
+    	width: 800px;
+    	height: 300px;
+
+    }
+
+    #placeholder2 {
+    	background-color: #fff999;
+    	width: 350px;
+    	height: 300px;
+    	margin-left:50px;
+    	padding-left:50px;
+
+    }
+    
+    button {
+    	background-color:255,255,0;
+    	#4CAF50
+    }
+
+  .signup-panel {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-top: 30px;
+}
+.signup-panel i {
+  font-size: 30px;
+  line-height: 50px;
+  color: #999;
+}
+.signup-panel form input, .signup-panel form span {
+  height: 50px;
+}
+.signup-panel .welcome {
+  font-size: 26px;
+  text-align: center;
+  margin-left: 0;
+}
+.signup-panel p {
+  font-size: 13px;
+  font-weight: 200;
+  margin-left: 25%;
+}
+.signup-panel .button {
+  margin-left: 35%;
 }
