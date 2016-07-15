@@ -15,7 +15,6 @@ module.exports = function(app){
 
 
 
-
 //////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////
 
@@ -27,26 +26,14 @@ module.exports = function(app){
 	// Below code handles when users "visit" a page. 
 	// In each of the below cases the user is shown an HTML page of content
 	// ---------------------------------------------------------------------------
-	app.get('/index', function (req, res) {
-	 		//orm.selectAll()
-	 	connection.query('SELECT * FROM burgers', function(err, result) {
-            
-            if (err) throw err;
-            res.render('index', {
-            	burgers: result
-            });
-
-        });
-	    	//orm.selectAll('burgers', function(req, res) {
-				
 	
-	}); // end  app.get
-
 app.get('/', function(req, res){
-		res.sendFile(path.join(__dirname + '/index.html'));
+		res.sendFile(path.join(__dirname + '/../public/html/Table1.html'));
 	});
 
-
+app.get('/index', function(req, res){
+		res.sendFile(path.join(__dirname + '/../public/html/Table1.html'));
+	});
 	/* app.use(function(req, res){
 			orm.selectAll('burgers');
 	        console.log("app use: " + res);
