@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */
@@ -73,10 +75,108 @@
     <div class="col-sm-2 sidenav">
       
     </div>
-    <div class="col-sm-8 center">
+    <div class="col s8 center">
       <h1>Create Table</h1>
       <div class="row" >
-        <div id="placeholder" class="createTable"></div>
+        <div class="createTable">
+
+            <!-- Table where user can enter information -->
+            <table class="bordered striped respinsive-table">
+                
+                <!-- Columns for the table that we need to generate in the order the user selects them in -->
+                <thead>
+                  <tr>
+                      <th data-field="id">Name</th>
+                      <th data-field="name">Description</th>
+                      <th data-field="price">Group</th>
+                      <th data-field="id">Whole Sale Price</th>
+                      <th data-field="name">Retail Price</th>
+                      <th data-field="price">In stock</th>
+                      <th data-field="id">MRP</th>
+                  </tr>
+                </thead>
+
+                <!-- Initial two rows where the user can enter information to be stored in SQL and displayed -->
+                <tbody>
+                    <tr>
+                      <td class="grey-text">1</td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="grey-text">2</td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                      <td><label>
+                            <input type="text" placeholder="" />
+                          </label>
+                      </td>
+                    </tr>
+                </tbody>
+
+            </table> 
+
+            <!-- Button to add a new row to the table -->
+            <a class="waves-effect waves-light btn yellow black-text">New Row</a>
+
+        </div>
       </div>
     </div>
     <div class="col-sm-2 sidenav">
