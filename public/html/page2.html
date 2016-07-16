@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Create Data</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -81,100 +81,70 @@
         <div class="createTable">
 
             <!-- Table where user can enter information -->
-            <table class="bordered striped respinsive-table">
+            <table class="bordered striped respinsive-table centered">
                 
                 <!-- Columns for the table that we need to generate in the order the user selects them in -->
                 <thead>
                   <tr>
-                      <th data-field="id">Name</th>
-                      <th data-field="name">Description</th>
-                      <th data-field="price">Group</th>
-                      <th data-field="id">Whole Sale Price</th>
-                      <th data-field="name">Retail Price</th>
-                      <th data-field="price">In stock</th>
-                      <th data-field="id">MRP</th>
+                      <th data-field="name">Name</th>
+                      <th data-field="desc">Description</th>
+                      <th data-field="group">Group</th>
+                      <th data-field="WSP">Whole Sale Price</th>
+                      <th data-field="RTP">Retail Price</th>
+                      <th data-field="Instock">In stock</th>
+                      <th data-field="MRP">MRP</th>
                   </tr>
                 </thead>
 
                 <!-- Initial two rows where the user can enter information to be stored in SQL and displayed -->
                 <tbody>
                     <tr>
-                      <td class="grey-text">1</td>
-                      <td><label>
-                            <input type="text" placeholder="" />
+                      <td>
+                          <label>
+                            <input id="nameInput" type="text" placeholder="" />
                           </label>
                       </td>
-                      <td><label>
-                            <input type="text" placeholder="" />
+                      <td>
+                          <label>
+                            <input id="desriptionInput" type="text" placeholder="" />
                           </label>
                       </td>
-                      <td><label>
-                            <input type="text" placeholder="" />
+
+                      <td>
+                          <label>
+                            <input id="groupInput" type="text" placeholder="" />
                           </label>
                       </td>
-                      <td><label>
-                            <input type="text" placeholder="" />
+                      <td>
+                          <label>
+                            <input id="wholeSaleInput" type="text" placeholder="" />
                           </label>
                       </td>
-                      <td><label>
-                            <input type="text" placeholder="" />
+                      <td>
+                          <label>
+                            <input id="retailPriceInput" type="text" placeholder="" />
                           </label>
                       </td>
-                      <td><label>
-                            <input type="text" placeholder="" />
+                      <td>
+                          <label>
+                            <input id="inStockInput" type="text" placeholder="" />
                           </label>
                       </td>
-                      <td><label>
-                            <input type="text" placeholder="" />
-                          </label>
-                      </td>
-                      <td><label>
-                            <input type="text" placeholder="" />
+                      <td>
+                          <label>
+                            <input id="mRPInput" type="text" placeholder="" />
                           </label>
                       </td>
                     </tr>
 
-                    <tr>
-                      <td class="grey-text">2</td>
-                      <td><label>
-                            <input type="text" placeholder="" />
-                          </label>
-                      </td>
-                      <td><label>
-                            <input type="text" placeholder="" />
-                          </label>
-                      </td>
-                      <td><label>
-                            <input type="text" placeholder="" />
-                          </label>
-                      </td>
-                      <td><label>
-                            <input type="text" placeholder="" />
-                          </label>
-                      </td>
-                      <td><label>
-                            <input type="text" placeholder="" />
-                          </label>
-                      </td>
-                      <td><label>
-                            <input type="text" placeholder="" />
-                          </label>
-                      </td>
-                      <td><label>
-                            <input type="text" placeholder="" />
-                          </label>
-                      </td>
-                      <td><label>
-                            <input type="text" placeholder="" />
-                          </label>
-                      </td>
-                    </tr>
+                    
                 </tbody>
 
             </table> 
 
             <!-- Button to add a new row to the table -->
-            <a class="waves-effect waves-light btn yellow black-text">New Row</a>
+            <a class="waves-effect waves-light btn yellow black-text" id="sendRowButton" ">Send Row</a>
+            <a class="waves-effect waves-light btn yellow black-text" id="uploadCVButton">Uploade CV</a>
 
         </div>
       </div>
