@@ -62,16 +62,25 @@ p {
 footer.page-footer {
   margin: 0;
 }
+/*------------------------------------------------------------------*/
+h5 {
+  font-family: 'Squada One', cursive;
+  
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  /*font-family: 'Damion', cursive;*/
+  /*font-family: 'Squada One', cursive;*/
+  font-size: 40px;
+}
+.mdl-card__title{
+  background-color: 255,255,0;
+}
 
 
 
-
-
-
-
-
-
-
+/*-------------------------------------------------------------------*/
 /* Custom Stylesheet */
 /**
  * Use this file to override Materialize files so you can update
@@ -86,6 +95,7 @@ footer.page-footer {
 }
 .icon-block .material-icons {
 	font-size: inherit;
+  
 }
 
  /* Remove the navbar's default margin-bottom and rounded borders */
@@ -112,13 +122,13 @@ footer.page-footer {
     }
     
     /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
+   /* @media screen and (max-width: 767px) {
       .sidenav {
         height: auto;
         padding: 15px;
       }
       .row.content {height:auto;}
-    }
+    }*/
 
     #placeholder {
     	background-color: #fff999;
@@ -138,7 +148,7 @@ footer.page-footer {
     
     button {
     	background-color:255,255,0;
-    	#4CAF50 
+    	 
     }
 
   .signup-panel {
