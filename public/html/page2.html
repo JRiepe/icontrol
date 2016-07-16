@@ -80,8 +80,8 @@
       <div class="row" >
         <div class="createTable">
 
-            <!-- Table where user can enter information -->
-            <table class="bordered striped respinsive-table centered">
+        <!-- Table where user can enter information -->
+            <table class="bordered striped respinsive-table">
                 
                 <!-- Columns for the table that we need to generate in the order the user selects them in -->
                 <thead>
@@ -136,15 +136,15 @@
                           </label>
                       </td>
                     </tr>
-
-                    
+  
                 </tbody>
 
             </table> 
+           
 
             <!-- Button to add a new row to the table -->
-            <a class="waves-effect waves-light btn yellow black-text" id="sendRowButton" ">Send Row</a>
-            <a class="waves-effect waves-light btn yellow black-text" id="uploadCVButton">Uploade CV</a>
+            <a class="waves-effect waves-light btn yellow black-text" id="sendRowButton">Send Row</a>
+            <a class="waves-effect waves-light btn yellow black-text" id="uploadCVButton">Upload CSV</a>
 
         </div>
       </div>
@@ -153,6 +153,80 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            
+             <!-- Table where user can enter information -->
+            <table class="bordered striped respinsive-table">
+                
+                <!-- Columns for the table that we need to generate in the order the user selects them in -->
+                <thead>
+                  <tr>
+                      <th data-field="name">Name</th>
+                      <th data-field="desc">Description</th>
+                      <th data-field="group">Group</th>
+                      <th data-field="WSP">Whole Sale Price</th>
+                      <th data-field="RTP">Retail Price</th>
+                      <th data-field="Instock">In stock</th>
+                      <th data-field="MRP">MRP</th>
+                      <th data-field="Delete"></th>
+                  </tr>
+                </thead>
+
+                <!-- Initial two rows where the user can enter information to be stored in SQL and displayed -->
+                <tbody>
+                    <tr>
+                      <td>Name</td>
+                      <td></td> 
+                      <td></td>
+                      <td></td>
+                      <td>3424</td>
+                      <td></td>
+                      <td></td>
+                      <td><i class="material-icons">delete</i></td>
+                    </tr>
+               
+                    <tr>
+                      <td></td>
+                      <td></td> 
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><i class="material-icons">delete</i></td>
+                    </tr>
+                
+                    <tr>
+                      <td></td>
+                      <td></td> 
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><i class="material-icons">delete</i></td>
+                    </tr>
+
+                    <tr>
+                      <td></td>
+                      <td></td> 
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><i class="material-icons">delete</i></td>
+                    </tr>
+
+                </tbody>
+
+            </table> 
+        </div>
+    </div>
 </div>
 
 <footer class="container-fluid text-center">
