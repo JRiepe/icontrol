@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Create Table</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -81,11 +81,12 @@
         <div class="createTable">
 
             <!-- Table where user can enter information -->
-            <table class="bordered striped respinsive-table">
+            <table class="bordered striped respinsive-table centered">
                 
                 <!-- Columns for the table that we need to generate in the order the user selects them in -->
                 <thead>
                   <tr>
+                      <th data-field="id">id</th>
                       <th data-field="id">Name</th>
                       <th data-field="name">Description</th>
                       <th data-field="price">Group</th>
@@ -128,18 +129,10 @@
                             <input type="text" placeholder="" />
                           </label>
                       </td>
-                      <td><label>
-                            <input type="text" placeholder="" />
-                          </label>
-                      </td>
                     </tr>
 
                     <tr>
                       <td class="grey-text">2</td>
-                      <td><label>
-                            <input type="text" placeholder="" />
-                          </label>
-                      </td>
                       <td><label>
                             <input type="text" placeholder="" />
                           </label>
