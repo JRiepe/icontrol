@@ -9,6 +9,8 @@
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="../assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <link href="../assets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'>
@@ -165,10 +167,30 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">JS Squared</a>
+      Made by <a class="brown-text text-lighten-3 modal-trigger" href="#modal1">JS Squared</a>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal bottom-sheet">
+          <div class="modal-content">
+            <h4>JS Squared</h4>
+             <ul class = "collection">
+              <li class = "collection-item avatar">
+                <span class = "title">James Kemp</span>
+                <img src = "assets/images/james.jpg" alt class ="circle">
+                <p>
+                <p>Front-End &amp; Design, Javascript</p>
+                <a href="https://github.com/JamesKemp296"><i class="fa fa-github"></i></a>
+                <a href="http://www.twitter.com/JamesKemp296"><i class="fa fa-twitter"></i></a>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </div>
   </footer>
+  
 
 
  
@@ -176,6 +198,12 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="../js/materialize.js"></script>
   <script src="../js/init.js"></script>
-<script src="../js/main.js"></script>
+  <script src="../js/main.js"></script>
+  <script type="text/javascript">
+      $(document).ready(function(){
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal-trigger').leanModal();
+      });  
+  </script>
   </body>
 </html>

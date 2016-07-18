@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Create Data</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -80,101 +80,85 @@
       <div class="row" >
         <div class="createTable">
 
+
             <!-- Table where user can enter information -->
-            <table class="bordered striped respinsive-table">
+<!-- inserted form field to catch input and insert into DB with app.post and orm -->
+  <form action="/create" method="post">  
+            <table class="bordered striped respinsive-table centered">
+
+        <!-- Table where user can enter information -->
+            
+
                 
                 <!-- Columns for the table that we need to generate in the order the user selects them in -->
                 <thead>
                   <tr>
-                      <th data-field="id">Name</th>
-                      <th data-field="name">Description</th>
-                      <th data-field="price">Group</th>
-                      <th data-field="id">Whole Sale Price</th>
-                      <th data-field="name">Retail Price</th>
-                      <th data-field="price">In stock</th>
-                      <th data-field="id">MRP</th>
+                      <th data-field="name">Name</th>
+                      <th data-field="desc">Description</th>
+                      <th data-field="group">Group</th>
+                      <th data-field="WSP">Whole Sale Price</th>
+                      <th data-field="RTP">Retail Price</th>
+                      <th data-field="Instock">In stock</th>
+                      <th data-field="MRP">MRP</th>
                   </tr>
                 </thead>
 
                 <!-- Initial two rows where the user can enter information to be stored in SQL and displayed -->
+                
+  
+   
+
                 <tbody>
                     <tr>
-                      <td class="grey-text">1</td>
-                      <td><label>
-                            <input type="text" placeholder="" />
+                      <td>
+                          <label>
+                            <input id="nameInput" name="nameInput" type="text" placeholder="" />
                           </label>
                       </td>
-                      <td><label>
-                            <input type="text" placeholder="" />
+                      <td>
+                          <label>
+                            <input id="desriptionInput" name="desriptionInput" type="text" placeholder="" />
                           </label>
                       </td>
-                      <td><label>
-                            <input type="text" placeholder="" />
-                          </label>
-                      </td>
-                      <td><label>
-                            <input type="text" placeholder="" />
-                          </label>
-                      </td>
-                      <td><label>
-                            <input type="text" placeholder="" />
-                          </label>
-                      </td>
-                      <td><label>
-                            <input type="text" placeholder="" />
-                          </label>
-                      </td>
-                      <td><label>
-                            <input type="text" placeholder="" />
-                          </label>
-                      </td>
-                      <td><label>
-                            <input type="text" placeholder="" />
-                          </label>
-                      </td>
-                    </tr>
 
-                    <tr>
-                      <td class="grey-text">2</td>
-                      <td><label>
-                            <input type="text" placeholder="" />
+                      <td>
+                          <label>
+                            <input id="groupInput" name="groupInput" type="text" placeholder="" />
                           </label>
                       </td>
-                      <td><label>
-                            <input type="text" placeholder="" />
+                      <td>
+                          <label>
+                            <input id="wholeSaleInput" name="wholeSaleInput" type="text" placeholder="" />
                           </label>
                       </td>
-                      <td><label>
-                            <input type="text" placeholder="" />
+                      <td>
+                          <label>
+                            <input id="retailPriceInput" name="retailPriceInput" type="text" placeholder="" />
                           </label>
                       </td>
-                      <td><label>
-                            <input type="text" placeholder="" />
+                      <td>
+                          <label>
+                            <input id="inStockInput" name="inStockInput" type="text" placeholder="" />
                           </label>
                       </td>
-                      <td><label>
-                            <input type="text" placeholder="" />
-                          </label>
-                      </td>
-                      <td><label>
-                            <input type="text" placeholder="" />
-                          </label>
-                      </td>
-                      <td><label>
-                            <input type="text" placeholder="" />
-                          </label>
-                      </td>
-                      <td><label>
-                            <input type="text" placeholder="" />
+                      <td>
+                          <label>
+                            <input id="mRPInput" name="mRPInput" type="text" placeholder="" />
                           </label>
                       </td>
                     </tr>
+  
                 </tbody>
-
+         
             </table> 
+           
 
             <!-- Button to add a new row to the table -->
-            <a class="waves-effect waves-light btn yellow black-text">New Row</a>
+
+            <button class="waves-effect waves-light btn yellow black-text" id="sendRowButton" type="submit">Send Row</button>        
+    </form> <!-- end of form **** placed button before /form to enable the catch!!! --> 
+    <br>
+    <button class="waves-effect waves-light btn yellow black-text" id="uploadCVButton">Upload CSV</button>
 
         </div>
       </div>
@@ -183,6 +167,80 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            
+             <!-- Table where user can enter information -->
+            <table class="bordered striped respinsive-table">
+                
+                <!-- Columns for the table that we need to generate in the order the user selects them in -->
+                <thead>
+                  <tr>
+                      <th data-field="name">Name</th>
+                      <th data-field="desc">Description</th>
+                      <th data-field="group">Group</th>
+                      <th data-field="WSP">Whole Sale Price</th>
+                      <th data-field="RTP">Retail Price</th>
+                      <th data-field="Instock">In stock</th>
+                      <th data-field="MRP">MRP</th>
+                      <th data-field="Delete"></th>
+                  </tr>
+                </thead>
+
+                <!-- Initial two rows where the user can enter information to be stored in SQL and displayed -->
+                <tbody>
+                    <tr>
+                      <td>Name</td>
+                      <td></td> 
+                      <td></td>
+                      <td></td>
+                      <td>3424</td>
+                      <td></td>
+                      <td></td>
+                      <td><i class="material-icons">delete</i></td>
+                    </tr>
+               
+                    <tr>
+                      <td></td>
+                      <td></td> 
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><i class="material-icons">delete</i></td>
+                    </tr>
+                
+                    <tr>
+                      <td></td>
+                      <td></td> 
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><i class="material-icons">delete</i></td>
+                    </tr>
+
+                    <tr>
+                      <td></td>
+                      <td></td> 
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><i class="material-icons">delete</i></td>
+                    </tr>
+
+                </tbody>
+
+            </table> 
+        </div>
+    </div>
 </div>
 
 <footer class="container-fluid text-center">

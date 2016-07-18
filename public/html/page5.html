@@ -10,7 +10,12 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
   <!-- DC Flat Buttons CSS -->
 <link type="text/css" rel="stylesheet" href="http://cdn.dcodes.net/2/flat_buttons/css/dc_flat_buttons.css" />
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+<script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+
   <style>
+  
     /* Remove the navbar's default margin-bottom and rounded borders */
     .navbar {
       margin-bottom: 0;
@@ -77,24 +82,27 @@
     </div>
     <div class="col-sm-8 text-center">
       <h1>Reports</h1>
-      <div class="row">
+      <div class="row  ">
 
 <!-- Table view showing inventory  -->
       <div class="col-sm-6 text-center">
-      <div id="placeholder2" class="reportView1"></div>
+      <div id="placeholder2" class="ct-chart ct-golden-section reportView1"></div>
 
 
 <!-- Dropdown menu to generate reports -->
     <div class="dropdown">
-      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-        Report options
-        <span class="caret"></span>
-      </button>
+       
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" >
+              Report options
+              <span class="caret"></span>
+            </button>
+      
         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-        <li><a href="#">Report 1</a></li>
-        <li><a href="#">Report 2</a></li>
-        <li><a href="#">Report 3</a></li>
+        <li><a href="/test/rep1">Report 1</a></li>
+        <li><a href="/test/rep2">Report 2</a></li>
+        <li><a href="http://yahoo.com/">Report 3</a></li>
         </ul>
+        
         </div>
         </div>
       <div class="col-sm-6 text-center">
@@ -122,10 +130,42 @@
     </div>
   </div>
 </div>
-
+              
 <footer class="container-fluid text-center">
   <p>Footer Text</p>
 </footer>
+
+<script>
+  // Initialize a Line chart in the container with the ID chart1
+  var chart = new Chartist.Bar('.ct-chart', {
+  labels: ['W1', 'W2', 'W3', 'W4', 'W5', 'W6', 'W7', 'W8', 'W9', 'W10'],
+  series: [
+    [1, 2, 4, 8, 6, -2, -1, -4, -6, -2]
+  ]
+}, {
+  high: 10,
+  low: -10,
+  axisX: {
+    labelInterpolationFnc: function(value, index) {
+      return index % 2 === 0 ? value : null;
+    }
+  }
+});
+
+// Listen for draw events on the bar chart
+chart.on('draw', function(data) {
+  // If this draw event is of type bar we can use the data to create additional content
+  if(data.type === 'bar') {
+    // We use the group element of the current series to append a simple circle with the bar peek coordinates and a circle radius that is depending on the value
+    data.group.append(new Chartist.Svg('circle', {
+      cx: data.x2,
+      cy: data.y2,
+      r: Math.abs(Chartist.getMultiValue(data.value)) * 2 + 5
+    }, 'ct-slice-pie'));
+  }
+});
+
+</script>
 
 </body>
 </html>
