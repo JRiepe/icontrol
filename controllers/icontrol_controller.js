@@ -28,6 +28,7 @@ module.exports = function(app){
 	// ---------------------------------------------------------------------------
 	
 app.get('/', function(req, res){
+		//res.render('index');
 		res.sendFile(path.join(__dirname + '/../public/html/index.html'));
 	});
 
@@ -55,31 +56,47 @@ app.get('/page5', function(req, res){
 		res.sendFile(path.join(__dirname + '/../public/html/page5.html'));
 	});
 
-app.use(function(req, res){
-		res.sendFile(path.join(__dirname + '/../public/html/index.html'));
-	});
+app.get('/test', function (req, res) {
+		    //connection.query('UPDATE burgers SET devoured = ? WHERE id = ?', [true, req.params.id]);            
+            //console.log('test worked' + req.body)
+            //res.redirect('/');
+            //console.log('test from test is: '+ mRPInput);
+            res.sendFile(path.join(__dirname + '/../public/html/test.html'));
+    });// end  app.post (update) 
+
+//app.use(function(req, res){
+//		res.sendFile(path.join(__dirname + '/../public/html/index.html'));
+//	});
 //////////////////////////////////////////////////////////////////////////////////
 
 // api-routes
 
 //////////////////////////////////////////////////////////////////////////////////////////
 
+	
+
 
 	app.post('/update/:id', function (req, res) {
 		    //connection.query('UPDATE burgers SET devoured = ? WHERE id = ?', [true, req.params.id]);            
-            orm.updateOne('burgers', 'devoured', req.params.id,  function(result){
-            	res.redirect('/index');
- 			});
+            //orm.updateOne('owners', 'devoured', req.params.id,  function(result){
+            	
+            	//res.render('/page3');
+ 			//});
     });// end  app.post (update)
 		    		
 	
 	app.post('/create', function (req, res) {
+		    //var mRPInput = document.getElementById("myForm").elements.namedItem("mRPInput").value;
+		    console.log('test is: ' + req.body.mRPInput);
+		    //res.redirect('/test');
 		    
-		    console.log('burgername: ' + req.body.burgName);
-		    //connection.query('INSERT INTO burgers (burger_name, devoured, date) VALUES (?, false, now())', [req.body.burgName]);
-		    orm.insertOne('burgers', req.body.burgName, function(result){			    
-			    res.redirect('/index'); 
-		    });
+		    //res.sendFile(path.join(__dirname + '/../public/html/test.html'));
+		    
+			/*orm.insertOne('inventory', req.body.nameInput, req.body.descriptionInput, req.body.groupInput, req.body.wholeSaleInput,req.body.retailPriceInput, req.body.inStockInput, req.body.mRPInput, function(result){			    
+						    res.redirect('/page2'); 
+		    }); */
+			res.redirect('/page2')
+
 	}); // end  app.post (create)
 
 
