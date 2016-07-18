@@ -177,6 +177,7 @@ limitations under the License.
       // Listening for auth state changes.
       // [START authstatelistener]
       firebase.auth().onAuthStateChanged(function(user) {
+        console.log(user)
         // [START_EXCLUDE silent]
         document.getElementById('quickstart-verify-email').disabled = true;
         // [END_EXCLUDE]
@@ -213,12 +214,17 @@ limitations under the License.
           document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
           document.getElementById('quickstart-sign-in').textContent = 'Sign in';
           document.getElementById('quickstart-account-details').textContent = 'null';
+
           // [END_EXCLUDE]
         }
         // [START_EXCLUDE silent]
         document.getElementById('quickstart-sign-in').disabled = false;
         // [END_EXCLUDE]
+      console.log(user);
       });
+      
+
+
       // [END authstatelistener]
 
       document.getElementById('quickstart-sign-in').addEventListener('click', toggleSignIn, false);
@@ -230,6 +236,14 @@ limitations under the License.
     window.onload = function() {
       initApp();
     };
+// -------------------------export  object from this file--------------------------------------
+// console.log(providerData);
+console.log(user);
+console.log( );
+// module.exports = providerData
+
+
+
   </script>
 </head>
 <body>
