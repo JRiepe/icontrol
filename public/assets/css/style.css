@@ -178,3 +178,30 @@ h1 {
 .signup-panel .button {
   margin-left: 35%;
 }
+
+
+/*Login page fine tuning*/
+.quickstart-user-details-container{
+  background-color:white;
+  color:white;
+}
+
+#quickstart-account-details{
+  color: white;
+}
+
+#headlogin{
+  background-color: black;
+}
+
+#smalllogo{
+  margin-right: 10px; 
+}
+
+.navbar-header{
+
+}
+
+#myNavbar{
+
+}

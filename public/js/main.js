@@ -1,5 +1,6 @@
 var logSignInfo = require('../html/login.html');
-
+var page4 = require('../html/page4.html');
+var page2 = require('../html/page2.html');
 window.onload();
 
 $('#login').on('click', function(){
@@ -7,12 +8,13 @@ $('#login').on('click', function(){
 })
 
 function myFunction() {
-    var myWindow = window.open("../html/login.html", "", "width=100","height=100");
+    var myWindow = window.open("../html/login.html","", "width=350, height=480");
+
 }
 
-function myFunction2() {
-    var myWindow2 = window.close()
-}
+// function myFunction2() {
+//     var myWindow2 = window.close()
+// }
 // -----code pulled from uer.js file from the passport example from ari-------------------------------------------------------------------------
 
 function User (userObj) {
@@ -38,7 +40,7 @@ var connection = mysql.createConnection({
 	host: 'localhost',
 	user: 'root',
 	password: process.argv[2],
-	database: 'dbUsers'
+	database: 'icontrol_db'
 });
 
 function connectToDB(){
@@ -54,7 +56,7 @@ function connectToDB(){
 module.exports.connectToDB = connectToDB;
 
 function addUserToDB(userObj, callback){
-	connection.query('INSERT INTO tblUsers SET ?', userObj, function(err, results){
+	connection.query('INSERT INTO owners SET ?', userObj, function(err, results){
 		if (err) return callback(false, err)
 		callback(true. null)
 	});
@@ -63,8 +65,43 @@ function addUserToDB(userObj, callback){
 module.exports.addUserToDB = addUserToDB;
 
 function findUser(username, callback){
-	connection.query('SELECT * FROM tblUsers WHERE ?', {username: username}, function(err, user){
+	connection.query('SELECT * FROM owners WHERE ?', {username: username}, function(err, user){
 		callback(err, user)
 	})
 }
 module.exports.findUser = findUser;
+
+// -------------------------------------------------------------------------
+// Select user table when the button "create/update" is clicked on page4
+
+// $(#createUpdateButton).click(function(){
+// 	window.location.href="../html/page4.html";
+// 	ownTable();
+// }
+
+function ownTable(username, callback){
+	connection.query('SELECT * FROM owners WHERE ?', {username: username}, function(err, user){
+		callback(err, user)
+	})
+}
+
+/*----------------------Take user information and display it in the second table on page2 */
+
+// $(#createUpdateButton).onclick(function(){
+// 	window.location.href="../html/page4.html";
+// 	ownTable();
+// }
+
+// -----------------------Delete item from database and from view. 
+
+
+
+
+
+
+
+
+
+
+
+
